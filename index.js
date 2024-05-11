@@ -1,26 +1,14 @@
-const express=require('express')
-const app=express()
+const Buliding = require("./buliding")
 
-const student=require('./student')
-const staff=require('./staff')
-// app.get('/',(req,res)=>{
-//     res.send("Hellooooooo")
-// })
+const house1=new Buliding("villa")
 
-// app.listen(3001,()=>{
-//   console.log("server is running on port 3001");
-// })
+console.log(house1.getName());
 
+house1.setName("cottage")
 
-app.get('/',(req,res)=>{
-        res.send("Home page")
-    })
+console.log(house1.getName());
 
-app.use('/student',student)
-app.use('/staff',staff)
-
-
-    app.listen(3001,()=>{
-          console.log("server is running on port 3001");
-        })
-        
+const house2=new Buliding("cottage")
+ 
+console.log(house2.getName());
+    
